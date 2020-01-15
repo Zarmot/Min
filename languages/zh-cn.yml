@@ -11,18 +11,18 @@ nav:
   search: '搜索'
   toc: '目录'
 article:
-  read_more: '阅读更多'
+  read_more: '查看全文'
   read: '读完'
   about: '约'
   words: '字'
   comments: '评论'
   contents: '目录'
 search:
-  hint: '站内搜索'
+  hint: '搜索'
 insight:
-  hint: '站内搜索'
+  hint: '搜索'
   posts: '文章'
   pages: '页面'
   categories: '分类'
   tags: '标签'
-  untitled: '(无标题)'
+  untitled: '无题'
