@@ -2,12 +2,16 @@
     <div class="container">
     <% if (typeof cating == "undefined" ? true : false || !cating){ %>
         <% page.posts.each(function(post){ %>
-            <%- partial('common/article', { post, index: true }) %>
+            <% if (!post.hide){ %>
+                <%- partial('common/article', { post, index: true }) %>
+            <% } %>
         <% }); %>
     <% } %>
     <% if (typeof cating != "undefined" ? true : false && cating){ %>
         <% page.posts.each(function(post){ %>
-            <%- partial('common/article', { post, index: true, cating: true }) %>
+            <% if (!post.hide){ %>
+                <%- partial('common/article', { post, index: true, cating: true }) %>
+            <% } %>
         <% }); %>
     <% } %>
     <% if (page.total > 1) { %>
