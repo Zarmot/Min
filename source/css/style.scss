@@ -1,11 +1,17 @@
-$family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
-$family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
-body, button, input, select, textarea {
-    font-family: $family-serif;
+@font-face{
+    font-family: Blog;
+    src: url("/font/blog.woff") format("woff");
+}
+@font-face{
+    font-family: Code;
+    src: url("/font/code.woff") format("woff");
 }
 
+body, button, input, select, textarea {
+    font-family: Blog;
+}
 
 a.tag.article-tag {
     font-size: 0.9rem;
@@ -75,7 +81,7 @@ a.tag.article-tag {
         }
 
         .article-category-link {
-            margin: 0 0.3rem;
+            margin-right: 0.3rem;
         }
     }
 
@@ -341,6 +347,7 @@ a.tag.article-tag {
 .footer {
     font-size: .9rem;
     background: transparent;
+    padding: 0rem 1.5rem 6rem;
 
     .content {
         padding-top: 2rem;
@@ -439,7 +446,7 @@ a.tag.article-tag {
 
 code, pre {
     font-size: 0.85rem;
-    font-family: $family-mono;
+    font-family: Code;
 }
 
 figure.highlight {
@@ -479,7 +486,7 @@ figure.highlight {
 
         span {
             font-weight: 500;
-            font-family: $family-mono;
+            font-family: Code;
         }
 
         a {

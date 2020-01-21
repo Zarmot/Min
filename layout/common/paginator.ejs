@@ -31,7 +31,7 @@ function pagination(c, m) {
     }
     return elements;
 } %>
-<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <div class="pagination-previous<%= page.current > 1 ? '' : ' is-invisible is-hidden-mobile' %>">
         <a href="<%= link_url(page.current - 1) %>"><%= __('nav.prev') %></a>
     </div>
