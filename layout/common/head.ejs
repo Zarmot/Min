@@ -2,8 +2,6 @@
 <title><%= page_title() %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
-
 <% const languages = display_languages();
 const pageLanguage = page_language(page);
 if (languages.length > 1) {
@@ -37,22 +35,22 @@ if (languages.length > 1) {
 <% } %>
 
 <% if (has_config('favicon')) { %>
-<link rel="icon" href="<%- get_config('favicon') %>">
+<link rel="icon" href="<%- get_config('favicon') %>" type="image/x-icon">
 <% } %>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans+SC">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
 <% if (!(has_config('plugins.gallery') && get_config('plugins.gallery') === false)) { %>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/justifiedGallery@3.6.5/dist/css/justifiedGallery.min.css">
 <% } %>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/<%= get_config('article.highlight', 'atom-one-light') %>.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/<%= get_config('article.highlight', 'atom-one-light') %>.min.css">
 
 <%- css('css/style') %>
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script defer src="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.min.js"></script>
 
 <% if (has_config('plugins')) { %>
     <% for (let plugin in get_config('plugins')) { %>
